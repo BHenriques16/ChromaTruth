@@ -1,0 +1,7 @@
+opencv
+tqdm
+transformers
+diffusers
+accelerate
+scikit-image
+matplotlib
