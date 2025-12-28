@@ -5,3 +5,4 @@ diffusers
 accelerate
 scikit-image
 matplotlib
+scikit-learn
