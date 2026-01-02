@@ -2,11 +2,9 @@ import os
 import shutil
 import random
 
-# Caminhos (ajusta conforme o teu PC)
 source_folder = 'celeba_hq_256'
 base_data = 'data'
 
-# Estrutura sugerida
 folders = [
     '01_Real/train', 
     '01_Real/val', 
@@ -18,11 +16,11 @@ folders = [
 for f in folders:
     os.makedirs(os.path.join(base_data, f), exist_ok=True)
 
-# Obter lista de imagens e baralhar
+# Get list of images and shuffle# 
 images = [f for f in os.listdir(source_folder) if f.endswith(('.jpg', '.png'))]
 random.shuffle(images)
 
-# Divisão (30k imagens)
+# Data splitting (30k images)
 train_imgs = images[:25000]
 val_imgs = images[25000:27500]
 test_imgs = images[27500:]
